@@ -30,5 +30,11 @@ namespace R5T.F0131.Extensions
         {
             return Instances.StringOperator_Extensions.ToCodeFileContent_WithoutTrim(value);
         }
+
+        /// <inheritdoc cref="IStringOperator.ToCodeFileContent_WithoutTrimEnd(string)"/>
+        public static ICodeFileContent ToCodeFileContent_WithoutTrimEnd(this string value)
+        {
+            return Instances.StringOperator_Extensions.ToCodeFileContent_WithoutTrimEnd(value);
+        }
     }
 }

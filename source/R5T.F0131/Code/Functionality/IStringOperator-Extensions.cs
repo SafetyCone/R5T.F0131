@@ -48,5 +48,16 @@ namespace R5T.F0131.Extensions
             var output = Instances.StringOperator_T0193_Extensions.ToCodeFileContent(value);
             return output;
         }
+
+        /// <summary>
+        /// Trims the beginning (but not the end) of the input. If you do not want your input trimmed, see <see cref="ToCodeFileContent_WithoutTrim(string)"/>.
+        /// </summary>
+        public ICodeFileContent ToCodeFileContent_WithoutTrimEnd(string value)
+        {
+            var trimmedValue = value.TrimStart();
+
+            var output = this.ToCodeFileContent_WithoutTrim(trimmedValue);
+            return output;
+        }
     }
 }
